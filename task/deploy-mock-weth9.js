@@ -19,5 +19,5 @@ task('deploy-mock-weth9')
   const mockjson = JSON.stringify(mockpack, null, 2)
 
   fs.writeFileSync(mockpath, mockjson);
-  return pack;
+  return mockpack;
 })
