@@ -30,7 +30,7 @@ async function build(network) {
   }, true) // alsoPackType
   const pack = await builder.build();
 
-  fs.writeFileSync(`./pack/weth9_${network}.dpack.json`, JSON.stringify(pack, null, 2));
+  fs.writeFileSync(`./packs/weth9_${network}.dpack.json`, JSON.stringify(pack, null, 2));
 }
 
 build('ethereum')
