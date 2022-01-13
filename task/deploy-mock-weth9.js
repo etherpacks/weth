@@ -6,9 +6,9 @@ const { task } = require('hardhat/config')
 
 task('deploy-mock-weth9', 'deploy mock Weth9')
 .setAction(async (args, hre) => {
-  const [ signer ]  = hre.ethers.getSigners();
+  const [ signer ]  = await hre.ethers.getSigners();
   const pack = require('../packs/weth9_ethereum.dpack.json')  // reference deployment for mocks
-  const dapp = dpack.Dapp.loadFromPack(pack, signer, hre.ethers)
+  const dapp = await dpack.Dapp.loadFromPack(pack, signer, hre.ethers)
   const weth9 = await dapp.types.WETH9.deploy()
   const mockpack = structuredClone(pack)
   mockpack.network = hre.network.name
