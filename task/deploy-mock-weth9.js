@@ -10,7 +10,7 @@ task('deploy-mock-weth9', 'deploy mock Weth9')
   const pack = require('../packs/weth9_ethereum.dpack.json')  // reference deployment for mocks
   const dapp = await dpack.Dapp.loadFromPack(pack, signer, hre.ethers)
   const weth9 = await dapp.types.WETH9.deploy()
-  const mockpack = structuredClone(pack)
+  const mockpack = JSON.parse(JSON.stringify(pack))
   mockpack.network = hre.network.name
   mockpack.objects.weth9.address = weth9.address;
   const mockpath = path.join(__dirname, `../packs/weth9_${hre.network.name}.dpack.json`)
