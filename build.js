@@ -33,7 +33,7 @@ async function build(network) {
     address: weth_addresses[network],
     typename: 'WETH9',
     artifact: weth_artifacts[network]
-  })
+  }, false) // typename already exists
   const pack = await builder.build();
 
   fs.writeFileSync(`./pack/weth_${network}.dpack.json`, JSON.stringify(pack, null, 2));
