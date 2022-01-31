@@ -6,14 +6,14 @@ const dpack = require('dpack')
 
 // Artifacts compiled from etherscan data on 11 Jan 22
 // Verified with remix
-const weth9_artifacts = {
+const weth_artifacts = {
   'ethereum': require('./link/weth-ethereum-artifact.json'),
   'ropsten': require('./link/weth-ropsten-artifact.json'),
   'kovan': require('./link/weth-kovan-artifact.json'),
   'goerli': require('./link/weth-goerli-artifact.json')
 }
 
-const weth9_addresses = {
+const weth_addresses = {
   'ethereum': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', // Verify -- it's #2 ETH holder after ETH2 deposit contract, https://tokenlists.org/
   'ropsten': '0xc778417E063141139Fce010982780140Aa0cD5Ab', // Verify -- https://tokens.uniswap.org and etherscan, 290k ropsten eth
   'kovan': '0xd0A1E359811322d97991E03f863a0C30C2cF029C', // Verify -- https://tokens.uniswap.org and etherscan, 720k kovan eth
@@ -23,14 +23,20 @@ const weth9_addresses = {
 async function build(network) {
   const builder = new dpack.PackBuilder(network)
   await builder.packObject({
-    objectname: 'weth9',
-    address: weth9_addresses[network],
+    objectname: 'weth',
+    address: weth_addresses[network],
     typename: 'WETH9',
-    artifact: weth9_artifacts[network]
+    artifact: weth_artifacts[network]
   }, true) // alsoPackType
+  await builder.packObject({ // also name it weth9
+    objectname: 'weth9',
+    address: weth_addresses[network],
+    typename: 'WETH9',
+    artifact: weth_artifacts[network]
+  })
   const pack = await builder.build();
 
-  fs.writeFileSync(`./packs/weth9_${network}.dpack.json`, JSON.stringify(pack, null, 2));
+  fs.writeFileSync(`./pack/weth_${network}.dpack.json`, JSON.stringify(pack, null, 2));
 }
 
 build('ethereum')
