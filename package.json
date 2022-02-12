@@ -2,14 +2,10 @@
   "name": "weth-pack",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "devDependencies": {
-    "dpack": "github:dapphub/dpack",
+    "@etherpacks/dpack": "^0.0.21",
     "hardhat": "^2.8.2"
   }
 }
