@@ -2,7 +2,7 @@
 
 const fs = require('fs')
 
-const dpack = require('dpack')
+const dpack = require('@etherpacks/dpack')
 
 // Artifacts compiled from etherscan data on 11 Jan 22
 // Verified with remix
