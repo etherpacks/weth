@@ -1,15 +1,14 @@
 const fs = require('fs')
 const path = require('path')
 
-const dpack = require('dpack')
+const dpack = require('@etherpacks/dpack')
 const { task } = require('hardhat/config')
 
 task('deploy-mock-weth', 'deploy mock weth')
 .setAction(async (args, hre) => {
-  const [ signer ]  = await hre.ethers.getSigners();
-  const pack = require('../pack/weth_ethereum.dpack.json')  // reference deployment for mocks
-  const dapp = await dpack.Dapp.loadFromPack(pack, signer, hre.ethers)
-  const weth = await dapp.types.WETH9.deploy()
+  const pack = require('../pack/weth_ethereum.dpack.json')
+  const dapp = await dpack.load(pack, hre.ethers)
+  const weth = await dapp._types.WETH9.deploy()
   const mockpack = JSON.parse(JSON.stringify(pack))
   mockpack.network = hre.network.name
   mockpack.objects.weth.address = weth.address;
