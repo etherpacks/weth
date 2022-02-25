@@ -5,7 +5,7 @@
     "WETH9": {
       "typename": "WETH9",
       "artifact": {
-        "/": "QmX9wQF8y8KVSh3SvjHUf2yk9TMm59w8M7aa9f5YB3wfsg"
+        "/": "bafkreifvknyyddk4kssfoik6zk7nqdqnsbtrf3qglfat3h72rgvec3u4oa"
       }
     }
   },
@@ -15,7 +15,7 @@
       "address": "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6",
       "typename": "WETH9",
       "artifact": {
-        "/": "QmX9wQF8y8KVSh3SvjHUf2yk9TMm59w8M7aa9f5YB3wfsg"
+        "/": "bafkreifvknyyddk4kssfoik6zk7nqdqnsbtrf3qglfat3h72rgvec3u4oa"
       }
     },
     "weth9": {
@@ -23,7 +23,7 @@
       "address": "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6",
       "typename": "WETH9",
       "artifact": {
-        "/": "QmX9wQF8y8KVSh3SvjHUf2yk9TMm59w8M7aa9f5YB3wfsg"
+        "/": "bafkreifvknyyddk4kssfoik6zk7nqdqnsbtrf3qglfat3h72rgvec3u4oa"
       }
     }
   }
