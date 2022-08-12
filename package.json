@@ -1,11 +1,14 @@
 {
   "name": "weth-pack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "author": "",
   "license": "GPL-3.0",
+  "scripts": {
+    "build": "node build.js"
+  },
   "devDependencies": {
-    "@etherpacks/dpack": "^0.0.24",
-    "hardhat": "^2.8.2"
+    "@etherpacks/dpack": "^0.0.31",
+    "hardhat": "^2.10.1"
   }
 }
