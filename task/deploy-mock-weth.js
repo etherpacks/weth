@@ -7,7 +7,8 @@ const { task } = require('hardhat/config')
 task('deploy-mock-weth', 'deploy mock weth')
 .setAction(async (args, hre) => {
   const pack = require('../pack/weth_ethereum.dpack.json')
-  const dapp = await dpack.load(pack, hre.ethers)
+  const [ signer ]  = await hre.ethers.getSigners()
+  const dapp = await dpack.load(pack, hre.ethers, signer)
   const weth = await dapp._types.WETH9.deploy()
   const mockpack = JSON.parse(JSON.stringify(pack))
   mockpack.network = hre.network.name
