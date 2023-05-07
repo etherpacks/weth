@@ -6,7 +6,7 @@ const { task } = require('hardhat/config')
 
 task('deploy-mock-weth', 'deploy mock weth')
 .setAction(async (args, hre) => {
-  const netname = hre.network.name.replace('_fork', '')
+  const netname = args.netname ? args.netname : hre.network.name.replace('_fork', '')
   const pack = require(`../pack/weth_${netname}.dpack.json`)
   const [ signer ]  = await hre.ethers.getSigners()
   const dapp = await dpack.load(pack, hre.ethers, signer)
