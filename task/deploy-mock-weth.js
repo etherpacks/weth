@@ -3,6 +3,7 @@ const path = require('path')
 
 const dpack = require('@etherpacks/dpack')
 const { task } = require('hardhat/config')
+const GASLIMIT = '1000000000000'
 
 task('deploy-mock-weth', 'deploy mock weth')
 .setAction(async (args, hre) => {
@@ -10,7 +11,7 @@ task('deploy-mock-weth', 'deploy mock weth')
   const pack = require(`../pack/weth_${netname}.dpack.json`)
   const [ signer ]  = await hre.ethers.getSigners()
   const dapp = await dpack.load(pack, hre.ethers, signer)
-  const weth = await dapp._types.WETH9.deploy()
+  const weth = await dapp._types.WETH9.deploy({gasLimit: GASLIMIT})
   const mockpack = JSON.parse(JSON.stringify(pack))
   mockpack.network = netname
   mockpack.objects.weth.address = weth.address;
