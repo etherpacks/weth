@@ -12,7 +12,7 @@ task('deploy-mock-weth', 'deploy mock weth')
   const dapp = await dpack.load(pack, hre.ethers, signer)
   const weth = await dapp._types.WETH9.deploy()
   const mockpack = JSON.parse(JSON.stringify(pack))
-  mockpack.network = hre.network.name
+  mockpack.network = netname
   mockpack.objects.weth.address = weth.address;
   mockpack.objects.weth9.address = weth.address;
   const mockpath = path.join(__dirname, `../pack/weth_${netname}.dpack.json`)
