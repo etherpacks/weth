@@ -5,25 +5,25 @@
     "WETH9": {
       "typename": "WETH9",
       "artifact": {
-        "/": "bafkreifvknyyddk4kssfoik6zk7nqdqnsbtrf3qglfat3h72rgvec3u4oa"
+        "/": "bafkreidsszpx34yqnshrtuszx7n77zxttk2s54kc2m5cftjutaumxe67fa"
       }
     }
   },
   "objects": {
     "weth": {
       "objectname": "weth",
-      "address": "0x656765F5A17e7E44451AE559C19F51Bd2E4D28c7",
+      "address": "0x5Bd2c68aa07AC850Ea22BC5503BeF16744A5E1d7",
       "typename": "WETH9",
       "artifact": {
-        "/": "bafkreifvknyyddk4kssfoik6zk7nqdqnsbtrf3qglfat3h72rgvec3u4oa"
+        "/": "bafkreidsszpx34yqnshrtuszx7n77zxttk2s54kc2m5cftjutaumxe67fa"
       }
     },
     "weth9": {
       "objectname": "weth9",
-      "address": "0x656765F5A17e7E44451AE559C19F51Bd2E4D28c7",
+      "address": "0x5Bd2c68aa07AC850Ea22BC5503BeF16744A5E1d7",
       "typename": "WETH9",
       "artifact": {
-        "/": "bafkreifvknyyddk4kssfoik6zk7nqdqnsbtrf3qglfat3h72rgvec3u4oa"
+        "/": "bafkreidsszpx34yqnshrtuszx7n77zxttk2s54kc2m5cftjutaumxe67fa"
       }
     }
   }
