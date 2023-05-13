@@ -7,7 +7,7 @@ const GASLIMIT = '1000000000000'
 
 task('deploy-mock-weth', 'deploy mock weth')
 .setAction(async (args, hre) => {
-  const netname = args.netname ? args.netname : hre.network.name.replace('_fork', '')
+  const netname = args.netname ? args.netname : hre.network.name
   const pack = require(`../pack/weth_${netname}.dpack.json`)
   const [ signer ]  = await hre.ethers.getSigners()
   const dapp = await dpack.load(pack, hre.ethers, signer)
@@ -16,7 +16,7 @@ task('deploy-mock-weth', 'deploy mock weth')
   mockpack.network = netname
   mockpack.objects.weth.address = weth.address;
   mockpack.objects.weth9.address = weth.address;
-  const mockpath = path.join(__dirname, `../pack/weth_${netname}.dpack.json`)
+  const mockpath = path.join(__dirname, `../pack/weth_${hre.network.name}.dpack.json`)
   const mockjson = JSON.stringify(mockpack, null, 2)
   fs.writeFileSync(mockpath, mockjson);
   return mockpack;

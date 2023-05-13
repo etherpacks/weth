@@ -12,7 +12,7 @@
   "objects": {
     "weth": {
       "objectname": "weth",
-      "address": "0x7aE24A018aAB271462b79336a467bb8b53A390e1",
+      "address": "0x656765F5A17e7E44451AE559C19F51Bd2E4D28c7",
       "typename": "WETH9",
       "artifact": {
         "/": "bafkreifvknyyddk4kssfoik6zk7nqdqnsbtrf3qglfat3h72rgvec3u4oa"
@@ -20,7 +20,7 @@
     },
     "weth9": {
       "objectname": "weth9",
-      "address": "0x7aE24A018aAB271462b79336a467bb8b53A390e1",
+      "address": "0x656765F5A17e7E44451AE559C19F51Bd2E4D28c7",
       "typename": "WETH9",
       "artifact": {
         "/": "bafkreifvknyyddk4kssfoik6zk7nqdqnsbtrf3qglfat3h72rgvec3u4oa"
