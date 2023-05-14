@@ -10,7 +10,8 @@ const weth_artifacts = {
   'ethereum': require('./link/weth-ethereum-artifact.json'),
   'ropsten': require('./link/weth-ropsten-artifact.json'),
   'kovan': require('./link/weth-kovan-artifact.json'),
-  'goerli': require('./link/weth-goerli-artifact.json')
+  'goerli': require('./link/weth-goerli-artifact.json'),
+  'arbitrum_goerli': require('./link/weth-goerli-artifact.json')
 }
 
 const weth_addresses = {
@@ -18,6 +19,7 @@ const weth_addresses = {
   'ropsten': '0xc778417E063141139Fce010982780140Aa0cD5Ab', // Verify -- https://tokens.uniswap.org and etherscan, 290k ropsten eth
   'kovan': '0xd0A1E359811322d97991E03f863a0C30C2cF029C', // Verify -- https://tokens.uniswap.org and etherscan, 720k kovan eth
   'goerli': '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6', // Verify -- https://tokens.uniswap.org and etherscan, 250k goerli eth
+  'arbitrum_goerli': '0x5Bd2c68aa07AC850Ea22BC5503BeF16744A5E1d7' // Verify -- goerli.arbiscan.org, 1 goerli eth
 }
 
 async function build(network) {
@@ -43,3 +45,4 @@ build('ethereum')
 build('ropsten')
 build('kovan')
 build('goerli')
+build('arbitrum_goerli')
