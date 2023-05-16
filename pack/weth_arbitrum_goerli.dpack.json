@@ -5,7 +5,7 @@
     "WETH9": {
       "typename": "WETH9",
       "artifact": {
-        "/": "bafkreidsszpx34yqnshrtuszx7n77zxttk2s54kc2m5cftjutaumxe67fa"
+        "/": "bafkreifvknyyddk4kssfoik6zk7nqdqnsbtrf3qglfat3h72rgvec3u4oa"
       }
     }
   },
@@ -15,7 +15,7 @@
       "address": "0x5Bd2c68aa07AC850Ea22BC5503BeF16744A5E1d7",
       "typename": "WETH9",
       "artifact": {
-        "/": "bafkreidsszpx34yqnshrtuszx7n77zxttk2s54kc2m5cftjutaumxe67fa"
+        "/": "bafkreifvknyyddk4kssfoik6zk7nqdqnsbtrf3qglfat3h72rgvec3u4oa"
       }
     },
     "weth9": {
@@ -23,7 +23,7 @@
       "address": "0x5Bd2c68aa07AC850Ea22BC5503BeF16744A5E1d7",
       "typename": "WETH9",
       "artifact": {
-        "/": "bafkreidsszpx34yqnshrtuszx7n77zxttk2s54kc2m5cftjutaumxe67fa"
+        "/": "bafkreifvknyyddk4kssfoik6zk7nqdqnsbtrf3qglfat3h72rgvec3u4oa"
       }
     }
   }
